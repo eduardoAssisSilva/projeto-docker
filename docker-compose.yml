@@ -11,4 +11,10 @@ services:
     environment:
       - POSTGRES_USER=eduardo
       - POSTGRES_PASSWORD=eduardo123
+  frontend:
+    image: nginx:1.13
+    volumes:
+      - ./web:/usr/share/nginx/html/
+    ports:
+      - 80:80
       
